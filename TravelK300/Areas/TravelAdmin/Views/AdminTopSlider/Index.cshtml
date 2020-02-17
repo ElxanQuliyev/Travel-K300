@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/TravelAdmin/Views/Shared/_LayoutAdmin.cshtml";
+}
+@model   IList<TravelK300.Models.TopSlider>
+    <p>
+        <a href="@Url.Action("Create","AdminTopSlider")">Create</a>
+    </p>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Photo</th>
+                <th>Header</th>
+                <th>Description</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var tp in Model)
+            {
+                <tr>
+                    <td style="width:25%">
+                        <img class="img-fluid" src="@tp.SliderPhoto" alt="Alternate Text" />
+                    </td>
+                    <td>@tp.Header</td>
+                    <td>@tp.Description</td>
+                    <td>
+                        <a href="@Url.Action("Edit","AdminTopSlider",new { id=tp.Id})">Edit</a> |
+                        <a href="#">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>

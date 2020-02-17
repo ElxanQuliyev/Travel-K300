@@ -1,0 +1,329 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Khazar Travel</title>
+    <link rel="stylesheet" href="~/PublicFront/vendorss/css/slick.css">
+    <link rel="stylesheet" href="~/PublicFront/vendorss/css/slick-theme.css">
+    @Styles.Render("~/PublicFront/css")
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/PublicFront/css//bootstrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header - Start -->
+    <header id="Header">
+        <div class="container p-0">
+            <div class="header-all row justify-content-between">
+                <div class="col-md-2 headerLogo">
+                    <a href="index.html"><img class="img-fluid" src="image/logo.png" alt=""></a>
+                </div>
+                <div class="col-md-8 row" style="padding: 20px 0;">
+                    <div class="col-md-4 text-right">
+                        <img style="padding-bottom: 3px;" src="image/clock.png" alt="" srcset=""><span style="padding-left: 10px; font-size: 14px; font-weight: 500;">10:00 — 18:00</span>
+                    </div>
+                    <div class="col-md-4 text-right">
+                        <img style="padding-bottom: 3px;" src="image/phone.png" alt="" srcset=""> <span style="padding-left: 10px; font-size: 14px; font-weight: 500;">+994 12 505-50-10</span>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="dropdown">
+                            <a href="" style="font-size: 14px; font-weight: 500; text-decoration: none;" class="dropbtn">
+                                Choose the
+                                language
+                            </a>
+                            <div class="dropdown-content">
+                                <a href="#">
+                                    <img style="width: 12%;" src="https://image.flaticon.com/icons/svg/555/555554.svg"
+                                         alt=""><span style="padding-left: 7px;font-size: 14px;font-weight: bold;">AZ</span>
+                                </a>
+                                <a href="#">
+                                    <img style="width: 12%;" src="https://image.flaticon.com/icons/svg/555/555527.svg"
+                                         alt=""><span style="padding-left: 7px;font-size: 14px;font-weight: bold;">ENG</span>
+                                </a>
+                                <a href="#">
+                                    <img style="width: 12%;" src="https://image.flaticon.com/icons/svg/555/555451.svg"
+                                         alt=""><span style="padding-left: 7px;font-size: 14px;font-weight: bold;">RUS</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Header - End -->
+    <!-- Media - Header -->
+
+    <section id="MediaHeader" style="display: none;">
+        <div class="container-fluid">
+            <div class="media-all row justify-content-between">
+                <div class="col-6 row">
+                    <div class="col-1">
+                        <span style="font-size:30px;cursor:pointer" id="hLeft" onclick="openNav()">
+                            <i class="fas fa-bars"></i>
+                        </span>
+                    </div>
+                    <div class="col-10">
+                        <a href="index.html"><img src="image/logo.png" alt=""></a>
+                    </div>
+                    <div id="mySidenav" class="sidenav text-center">
+                        <div class="social row justify-content-center">
+                            <a href="https://www.facebook.com/KhazarTravel/videos/384842092400812/">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/khazartravelazerbaijan/"><i class="fab fa-instagram"></i></a>
+                            <a href="info@khazar-travel.com"><i class="fas fa-envelope"></i></a>
+                        </div>
+                        <div class="dropdown">
+                            <a style="font-weight: 600;" class="dropbtn" href="about.html">About Us</a>
+                        </div>
+                        <div class="dropdown">
+                            <a style="font-weight: 600;" class="dropbtn" href="services.html">Service Overview</a>
+                        </div>
+                        <div class="dropdown">
+                            <a style="font-weight: 600;" class="dropbtn" href="contact.html">Contact Us</a>
+                        </div>
+                        <div class="dropdown ">
+                            <a style="font-weight: 600;" class="dropbtn" href="visit.html">Visit Azerbaijan</a>
+                        </div>
+                        <div class="dropdown">
+                            <a style="font-weight: 600;" class="dropbtn" href="incoming.html">Incoming Department</a>
+                        </div>
+                        <div class="dropdown">
+                            <a style="font-weight: 600;" class="dropbtn" href="visit.html">Tours</a>
+                        </div>
+                        <div class="dropdown">
+                            <a style="font-weight: 600;" class="dropbtn" href="hotels.html">Hotels</a>
+                        </div>
+                        <div class="dropdown">
+                            <a style="font-weight: 600;" class="dropbtn" href="transfer.html">Transportation Service</a>
+                        </div>
+                        <div class="dropdown">
+                            <a style="font-weight: 600;" class="dropbtn" href="VIP.html">Khazar Travel VIP</a>
+                        </div>
+                        <div class="dropdown ">
+                            <a style="font-weight: 600;" class="dropbtn" href="collage.html">Travel Around</a>
+                        </div>
+                        <div class="dropdown">
+                            <a style="font-weight: 600;" class="dropbtn" href="outgoing.html">Outgoing Department</a>
+                        </div>
+                        <div class="dropdown">
+                            <a style="font-weight: 600;" class="dropbtn" href="collage.html">Holiday Tours</a>
+                        </div>
+                        <div class="dropdown">
+                            <a style="font-weight: 600;" class="dropbtn" href="business.html">Business Travel</a>
+                        </div>
+                        <div class="dropdown ">
+                            <a style="font-weight: 600;" class="dropbtn" href="ticketing.html">Fly with us</a>
+                        </div>
+                        <div class="dropdown">
+                            <a style="font-weight: 600;" class="dropbtn" href="ticketing.html">Ticketing</a>
+                        </div>
+                        <div class="dropdown">
+                            <a style="font-weight: 600;" class="dropbtn" href="gsa.html">GSA</a>
+                        </div>
+                        <div class="dropdown ">
+                            <a style="font-weight: 600;" class="dropbtn" href="e-visa.html">Visa Support</a>
+                        </div>
+                        <div class="dropdown ">
+                            <a style="font-weight: 600;" class="dropbtn" href="e-visa.html">E-Visa</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 text-right" style="padding-top: 15px !important;">
+                    <i style="cursor: pointer;" onclick="openNavS()" id="hRight" class="fas fa-ellipsis-v"></i>
+                    <div id="mySidenavS" class="sidenavS">
+                        <i class="far fa-clock"><span style="padding-left: 11px;">10:00 — 18:00</span></i>
+                        <i class="fa fa-phone"><span style="font-weight: 100;padding-left: 10px;">+994 12 505-50-10</span></i>
+                        <div class="media-btn col-10 text-center">
+                            <a href="#" data-aos="fade-right" class="hoverBtn">Get in Touch</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Media - End -->
+    <!-- Header - End -->
+    <!-- Header2 - Start -->
+
+    <section id="Header2">
+        <div class="container p-0">
+            <div class="header2-all row">
+                <div class="drops-all col-md-10">
+                    <div class="dropdown">
+                        <a href="about.html"><button class="dropbtn">About Us</button></a>
+                        <div class="dropdown-content">
+                            <a href="services.html">Service overview</a>
+                            <a href="contact.html">Contact us</a>
+                        </div>
+                    </div>
+                    <div class="dropdown ">
+                        <a href="visit.html"><button class="dropbtn">Visit Azerbaijan</button></a>
+                        <div class="dropdown-content">
+                            <a href="incoming.html">Incoming Department</a>
+                            <a href="visit.html">Tours</a>
+                            <a href="hotels.html">Hotels</a>
+                            <a href="transfer.html">Transportation Service</a>
+                            <a href="VIP.html">Khazar Travel VIP</a>
+                        </div>
+                    </div>
+                    <div class="dropdown ">
+                        <a href="collage.html"><button class="dropbtn">Travel Around</button></a>
+                        <div class="dropdown-content">
+                            <a href="outgoing.html">Outgoing Department</a>
+                            <a href="collage.html">Holiday Tours</a>
+                            <a href="business.html">Business Travel</a>
+                        </div>
+                    </div>
+                    <div class="dropdown ">
+                        <a href="ticketing.html"><button class="dropbtn">Fly with us</button></a>
+                        <div class="dropdown-content">
+                            <a href="ticketing.html">Ticketing</a>
+                            <a href="gsa.html">GSA</a>
+                        </div>
+                    </div>
+                    <div class="dropdown ">
+                        <a href="e-visa.html"><button class="dropbtn">Visa Support</button></a>
+                        <div class="dropdown-content">
+                            <a href="e-visa.html">E-Visa</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="social">
+                    <a href="https://www.facebook.com/KhazarTravel/videos/384842092400812/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/khazartravelazerbaijan/"><i class="fab fa-instagram"></i></a>
+                    <a href="info@khazar-travel.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Header2 - End -->
+
+
+    @RenderBody()
+
+
+    <!-- Footer - Start -->
+
+    <footer id="Footer">
+        <div class="container">
+            <div class="footer-all row">
+                <div data-aos="fade-up" class="col-md-5 footer-left" style="line-height: 40px;">
+                    <h6 style="padding-bottom: 20px;">CONTACT US</h6>
+                    <i class="fa fa-phone">
+                        <a href="contact.html">
+                            <span style="font-weight: 100;font-family: 'Montserrat', sans-serif !important;">
+                                +994 12 505-50-10 / +994 12
+                                449-40-00
+                            </span>
+                        </a>
+                    </i>
+                    <br>
+                    <i class="fas fa-envelope">
+                        <a style="font-weight: 100;font-family: 'Montserrat', sans-serif !important;"
+                           href="#">info@khazar-travel.com</a>
+                    </i>
+                    <br>
+                    <i class="fas fa-location-arrow">
+                        <span style="font-weight: 100;font-family: 'Montserrat', sans-serif !important;">
+                            <a href="contact.html">Ismayilbey Kutkashenli str.99c Baku, Azerbaijan</a>
+                        </span>
+                    </i>
+                </div>
+                <div data-aos="fade-up" class="col-md-4 text-left">
+                    <h6 style="padding-bottom: 20px;">QUICK LINKS</h6>
+                    <div class="links row">
+                        <div class="col-md-6" style="line-height: 30px;">
+                            <a href="about.html">About Us</a>
+                            <br>
+                            <a href="visit.html">Internal Tours</a>
+                            <br>
+                            <a href="collage.html">Leisure Travel</a>
+                        </div>
+                        <div class="col-md-6" style="line-height: 30px;">
+                            <a href="business.html">Business Travel</a>
+                            <br>
+                            <a href="contact.html">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-up" class="col-md-3 footerBtn text-center p-0" style="margin-top: 5vh;">
+                    <a href="contact.html" class="hoverBtn">Get in Touch</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Footer - End -->
+
+
+
+    <section id="Footer2">
+        <div class="container">
+            <div class="footer2 row justify-content-between">
+                <div class="col-md-4">
+                    <p>© 2019 ComparTeam. All Rights Reserved. </p>
+                </div>
+                <div class="col-md-3">
+                    <div class="social">
+                        <a href="https://www.facebook.com/KhazarTravel/videos/384842092400812/">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/khazartravelazerbaijan/"><i class="fab fa-instagram"></i></a>
+                        <a href="info@khazar-travel.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <p>Privacy Policy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Scroll - TOP -->
+
+    <div class='scrolltop'>
+        <div class='scroll icon'><i class="fa fa-4x fa-angle-up"></i></div>
+    </div>
+
+    <!-- Scroll - TOP -->
+
+
+
+    <script src="~/PublicFront/vendor/js/jquery-3.4.1.js"></script>
+    <script src="~/PublicFront/vendorss/js/slick.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="~/PublicFront/vendor/js/popper.min.js"></script>
+    <script src="~/PublicFront/vendor/js/bootstrap.min.js"></script>
+    <script src="~/PublicFront/js/app.js"></script>
+    <script src="~/PublicFront/js/Media.js"></script>
+    <script src="~/PublicFront/js/sliderIndex.js"></script>
+    <script src="~/PublicFront/js/Media2.js"></script>
+    <script src="~/PublicFront/js/ToTop.js"></script>
+
+</body>
+</html>
+
+
+
+

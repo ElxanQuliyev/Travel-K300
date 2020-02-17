@@ -1,0 +1,61 @@
+﻿@model TravelK300.Models.TopSlider
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/TravelAdmin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Edit</h2>
+<form action="" method="post" enctype="multipart/form-data">
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>TopSlider</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="form-group">
+           
+            <div class="col-2">
+                <label class="control-label">Old Photo</label>
+
+                <img src="@Model.SliderPhoto" class="img-thumbnail" alt="Alternate Text" />
+            </div>
+        </div>
+        <div class="form-group">
+            
+            <label style="border:1px solid green;padding:10px;background:green" for="a1">Sekil Seç</label>
+            <div class="col-md-10">
+
+                <input  id="a1" type="file" name="SliderPhoto" value="" />
+                @Html.ValidationMessageFor(model => model.SliderPhoto, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Header, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Header, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Header, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
