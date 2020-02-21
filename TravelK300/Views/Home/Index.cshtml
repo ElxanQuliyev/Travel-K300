@@ -6,6 +6,7 @@
 
     MoreInformation minfo = ViewBag.mInfo;
 }
+
 <section id="MainSlider">
     <div class="container-fluid p-0">
         <div class="mainSlider-all">
@@ -93,38 +94,30 @@
                     <h2 style="font-size: 49px;line-height: 1.2; font-weight:600; margin-bottom: 20px;">Discover Azerbaijan</h2>
                 </a>
                 <div class="tab row justify-content-between" style="border-bottom: 2px solid transparent;margin: 0;">
-                    <button style="background: transparent;font-size: 18px;border: none;letter-spacing: .1em;"
-                            class="active   p-0 tablinks" onclick="openCity(event, 'London')">
-                        ABOUT US
-                    </button>
-                    <button style="background: transparent;color: #9b9b9b;font-size: 18px;border: none;letter-spacing: .1em;"
-                            class="p-0 tablinks" onclick="openCity(event, 'Paris')">
-                        OUR MISSION
-                    </button>
-                    <button style="background: transparent;color: #9b9b9b;font-size: 18px;border: none;letter-spacing: .1em;"
-                            class="p-0 tablinks" onclick="openCity(event, 'Tokyo')">
-                        OUR VISION
-                    </button>
-                </div>
-                <div id="London" class="tabcontent pt-3">
-                    <p>
-                        Khazar Travel is committed to bringing our clients the best in value and quality travel arrangements. We
-                        are passionate about travel and sharing the world's wonders with you.
-                    </p>
-                </div>
+                    @foreach (DiscoverRight dis in ViewBag.DisRight)
+                    {
+                        <button style="background: transparent;font-size: 18px;border: none;letter-spacing: .1em;"
+                                class="active   p-0 tablinks" onclick="openCity(event, 'd@(dis.Id)')">
+                            @dis.Header
+                        </button>
+                    }
 
-                <div style="display: none;" id="Paris" class="tabcontent pt-3">
-                    <p>
-                        We are proud to offer excellent quality and value for money in our tours, which give you the chance to
-                        experience your chosen destination in an authentic and exciting way.
-                    </p>
+
                 </div>
-                <div style="display: none;" id="Tokyo" class="tabcontent pt-3">
-                    <p>
-                        Our mission is to provide the ultimate travel planning experience while becoming a one-stop shop for
-                        every travel service available in the industry.
-                    </p>
-                </div>
+                @{ 
+                    int discount = 0;
+                }
+                @foreach (DiscoverRight di in ViewBag.DisRight)
+                {
+                    <div id="d@(di.Id)" style="@(discount!=0 ? "display:none":"")" class="tabcontent pt-3">
+                        <p>
+                           @di.Description
+                        </p>
+                    </div>
+                    discount++;
+                }
+
+
                 <div class="disc-btn">
                     <a class="btn1" href="contact.html">Get in Touch</a>
                     <a class="btn2" href="about.html">Read More</a>
@@ -182,7 +175,7 @@
             {
                 <div class="tour-box mt-5 row">
                     <div data-aos="fade-right" data-aos-duration="1000" class="col-md-6 tour-img p-0">
-                        <img src="@tour.Photo" alt="">
+                        <img style="width:100%" src="@tour.Photo" alt="">
                     </div>
                     <div data-aos="fade-left" data-aos-duration="1000" class="col-md-6 tour-right">
                         <div class="tour-right-text">
@@ -193,9 +186,9 @@
                              @tour.Description
                             </p>
                         </div>
-                        <a href="abouttour.html" class="tourBtn">Buy This Tour</a>
+                        <a href="@Url.Action("TourDetail","Home",new { id=tour.Id})" class="tourBtn">Buy This Tour</a>
                         <div class="tour-price">
-                            <p>$ 1290</p>
+                            <p>@tour.Price Azn</p>
                         </div>
                     </div>
                 </div>
