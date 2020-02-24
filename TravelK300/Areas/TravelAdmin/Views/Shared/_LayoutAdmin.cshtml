@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Blank Page</title>
+    <title>@ViewBag.Title</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="~/Areas/TravelAdmin/FrontPublic/assets/vendor/bootstrap/css/bootstrap.min.css">
     <link href="~/Areas/TravelAdmin/FrontPublic/assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
@@ -126,7 +126,7 @@
                                 </div>
                                 <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a>
                                 <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Setting</a>
-                                <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                                <a class="dropdown-item" href="@Url.Action("logout","AdminAccount")"    ><i class="fas fa-power-off mr-2"></i>Logout</a>
                             </div>
                         </li>
                     </ul>

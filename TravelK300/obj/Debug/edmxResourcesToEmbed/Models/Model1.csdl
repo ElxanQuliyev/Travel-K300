@@ -100,5 +100,14 @@
     <EntitySet Name="Section2" EntityType="Self.Section2" />
     <EntitySet Name="Services" EntityType="Self.Service" />
     <EntitySet Name="TopSliders" EntityType="Self.TopSlider" />
+    <EntitySet Name="AdminSettings" EntityType="TravelK300MvcModel.AdminSetting" />
   </EntityContainer>
+  <EntityType Name="AdminSetting">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AdminEmail" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AdminPassword" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>

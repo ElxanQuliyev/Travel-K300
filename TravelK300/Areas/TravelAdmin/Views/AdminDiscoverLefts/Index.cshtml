@@ -8,7 +8,7 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Yeni Yarat", "Create")
 </p>
 <table class="table">
     <tr>
@@ -24,7 +24,7 @@
             <img class="img-thumbnail" src="@item.Photo" />
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id })
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id, })
         </td>
     </tr>
 }

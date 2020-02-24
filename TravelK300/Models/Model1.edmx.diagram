@@ -13,8 +13,9 @@
         <EntityTypeShape EntityType="TravelK300MvcModel.MoreInformation" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="TravelK300MvcModel.OurTeam" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="TravelK300MvcModel.Section2" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TravelK300MvcModel.Service" Width="1.5" PointX="4.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TravelK300MvcModel.Service" Width="1.5" PointX="3.125" PointY="6.875" IsExpanded="true" />
         <EntityTypeShape EntityType="TravelK300MvcModel.TopSlider" Width="1.5" PointX="6.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TravelK300MvcModel.AdminSetting" Width="1.5" PointX="0.75" PointY="7" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -10,6 +10,7 @@ using TravelK300.Models;
 
 namespace TravelK300.Areas.TravelAdmin.Controllers
 {
+    [AuthenticationFilter]
     public class AdminServicesController : Controller
     {
         private TravelDB db = new TravelDB();
@@ -17,12 +18,14 @@ namespace TravelK300.Areas.TravelAdmin.Controllers
         // GET: TravelAdmin/AdminServices
         public ActionResult Index()
         {
+            
             return View(db.Services.ToList());
         }
 
         // GET: TravelAdmin/AdminServices/Details/5
         public ActionResult Details(int? id)
         {
+
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);

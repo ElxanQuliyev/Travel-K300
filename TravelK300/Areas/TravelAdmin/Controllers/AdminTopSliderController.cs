@@ -9,11 +9,12 @@ using TravelK300.Models;
 
 namespace TravelK300.Areas.TravelAdmin.Controllers
 {
-   
+   [AuthenticationFilter]
     public class AdminTopSliderController : Controller
     {
         TravelDB db = new TravelDB();
         // GET: TravelAdmin/AdminTopSlider
+        [AllowAnonymous]
         public ActionResult Index()
         {
              

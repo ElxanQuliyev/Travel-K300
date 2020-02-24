@@ -2,26 +2,25 @@
 @{
     ViewBag.Title = "TourDetail";
     Layout = "~/Views/Shared/_Layout.cshtml";
-    AllTour tourDet = ViewBag.tourSingle;
 }
-
+@model TravelK300.ViewModel.homeVm
     <section id="TourInfo" class="my-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
                     <div class="tour-img">
-                        <img style="width:100%" src="@tourDet.Photo" alt="Alternate Text" />
+                        <img style="width:100%" src="@Model.tourSingle.Photo" alt="Alternate Text" />
                     </div>
                     <div class="tour-content py-5">
                         <div class="d-flex justify-content-between mb-3">
-                            <h2>@tourDet.Header </h2>
-                            <span>@tourDet.Price Azn</span>
+                            <h2>@Model.tourSingle.Header </h2>
+                            <span>@Model.tourSingle.Price Azn</span>
                         </div>
-                        <p>@tourDet.Description</p>
+                        <p>@Model.tourSingle.Description</p>
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    @foreach (AllTour trall in ViewBag.tourAll)
+                    @foreach (AllTour trall in Model.tourlist)
                     {
                         <div class="row my-3">
 

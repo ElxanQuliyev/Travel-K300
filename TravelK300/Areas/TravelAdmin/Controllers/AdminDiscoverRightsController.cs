@@ -10,6 +10,8 @@ using TravelK300.Models;
 
 namespace TravelK300.Areas.TravelAdmin.Controllers
 {
+
+        [AuthenticationFilter]
     public class AdminDiscoverRightsController : Controller
     {
         private TravelDB db = new TravelDB();
@@ -83,6 +85,7 @@ namespace TravelK300.Areas.TravelAdmin.Controllers
             if (ModelState.IsValid)
             {
                 db.Entry(discoverRight).State = EntityState.Modified;
+               
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

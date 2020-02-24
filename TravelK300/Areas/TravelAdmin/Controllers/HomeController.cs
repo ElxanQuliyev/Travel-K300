@@ -6,11 +6,15 @@ using System.Web.Mvc;
 
 namespace TravelK300.Areas.TravelAdmin.Controllers
 {
+    [AuthenticationFilter]
+
     public class HomeController : Controller
     {
+
         // GET: TravelAdmin/Home
         public ActionResult Index()
         {
+            
             return View();
         }
     }

@@ -2,15 +2,12 @@
     ViewBag.Title = "Home Page";
 }
 @using TravelK300.Models
-@{ 
-
-    MoreInformation minfo = ViewBag.mInfo;
-}
+@model TravelK300.ViewModel.homeVm
 
 <section id="MainSlider">
     <div class="container-fluid p-0">
         <div class="mainSlider-all">
-            @foreach (TopSlider sld in ViewBag.slideTop)
+            @foreach (TopSlider sld in Model.topSlider)
             {
                 <div class="mainSlider-box">
                     <img style="width:100%;object-fit:cover" class="img-fluid" src="@sld.SliderPhoto" />
@@ -94,7 +91,7 @@
                     <h2 style="font-size: 49px;line-height: 1.2; font-weight:600; margin-bottom: 20px;">Discover Azerbaijan</h2>
                 </a>
                 <div class="tab row justify-content-between" style="border-bottom: 2px solid transparent;margin: 0;">
-                    @foreach (DiscoverRight dis in ViewBag.DisRight)
+                    @foreach (DiscoverRight dis in Model.disRight)
                     {
                         <button style="background: transparent;font-size: 18px;border: none;letter-spacing: .1em;"
                                 class="active   p-0 tablinks" onclick="openCity(event, 'd@(dis.Id)')">
@@ -107,7 +104,7 @@
                 @{ 
                     int discount = 0;
                 }
-                @foreach (DiscoverRight di in ViewBag.DisRight)
+                @foreach (DiscoverRight di in Model.disRight)
                 {
                     <div id="d@(di.Id)" style="@(discount!=0 ? "display:none":"")" class="tabcontent pt-3">
                         <p>
@@ -135,7 +132,7 @@
     <div class="container">
         <h3>Our Services</h3>
         <div class="services-all row justify-content-center">
-            @foreach (Service item in ViewBag.serviceList)
+            @foreach (Service item in Model.services)
             {
                 <div data-aos="fade-right" data-aos-duration="1000" class="service-box row">
                     <div class="col-md-3">
@@ -171,7 +168,7 @@
     <div class="container">
         <div class="tours-all">
             <h3>Hot Tours</h3>
-            @foreach (AllTour tour in ViewBag.tours)
+            @foreach (AllTour tour in Model.tourlist)
             {
                 <div class="tour-box mt-5 row">
                     <div data-aos="fade-right" data-aos-duration="1000" class="col-md-6 tour-img p-0">
@@ -209,7 +206,7 @@
             Different People - One Mission
         </h3>
         <div class="row row-30 justify-content-center box-ordered">
-            @foreach (OurTeam team in ViewBag.team)
+            @foreach (OurTeam team in Model.ourteam)
             {
                 <div data-aos="fade-up" data-aos-duration="1000" class="col-sm-6 col-md-5 col-lg-3">
                     <!-- Team Modern-->
@@ -239,12 +236,12 @@
 </section>
 
 
-<section id="Booking" style=" --myback:url(@minfo.Photo)">
+<section id="Booking" style=" --myback:url(@Model.moreinfo.Photo)">
     <div class="container">
         <div class="booking-all">
-            <h3 data-aos="fade-right" data-aos-duration="1000">@minfo.Header <br> are Waiting for You!</h3>
+            <h3 data-aos="fade-right" data-aos-duration="1000">@Model.moreinfo.Header <br> are Waiting for You!</h3>
             <p data-aos="fade-left" data-aos-duration="1000">
-                @minfo.Description
+                @Model.moreinfo.Description
             </p>
             <a data-aos="fade-up" data-aos-duration="1000" href="hotels.html">Get More Information</a>
         </div>
@@ -256,7 +253,7 @@
     <div class="container-fluid">
         <h3 style="text-align: center; font-size: 15px;">GALLERY</h3>
         <div class="gallery-all">
-            @foreach (Gallery gl in ViewBag.galery)
+            @foreach (Gallery gl in Model.galleries)
             {
                 <a href="hotels.html">
                     <div class="gallery-box">

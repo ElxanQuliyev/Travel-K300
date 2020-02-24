@@ -35,5 +35,6 @@ namespace TravelK300.Models
         public virtual DbSet<Section2> Section2 { get; set; }
         public virtual DbSet<Service> Services { get; set; }
         public virtual DbSet<TopSlider> TopSliders { get; set; }
+        public virtual DbSet<AdminSetting> AdminSettings { get; set; }
     }
 }

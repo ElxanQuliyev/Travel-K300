@@ -12,11 +12,10 @@ namespace TravelK300.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class TopSlider
+    public partial class AdminSetting
     {
         public int Id { get; set; }
-        public string SliderPhoto { get; set; }
-        public string Header { get; set; }
-        public string Description { get; set; }
+        public string AdminEmail { get; set; }
+        public string AdminPassword { get; set; }
     }
 }
